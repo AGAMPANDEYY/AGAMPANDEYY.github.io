@@ -396,10 +396,27 @@ h3{font-size:1.1rem;font-weight:600;margin-bottom:12px;letter-spacing:.2px}
 }
 
 .projects-section .clean-list{
-  gap:14px;
+  gap:22px;
 }
 .projects-section .item-title{
-  font-weight:400;
+  font-weight:600;
+}
+.projects-section .item-header{
+  margin-bottom:4px;
+  align-items:baseline;
+}
+.projects-section .item-meta{
+  font-size:.72rem;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  color:var(--muted);
+  margin-bottom:0;
+}
+.projects-section .item-desc{
+  margin:0 0 6px;
+}
+.projects-section .item-links{
+  margin-top:2px;
 }
 .awards-list{
   gap:16px;
