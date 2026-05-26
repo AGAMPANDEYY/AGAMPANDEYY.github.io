@@ -396,27 +396,31 @@ h3{font-size:1.1rem;font-weight:600;margin-bottom:12px;letter-spacing:.2px}
 }
 
 .projects-section .clean-list{
-  gap:16px;
+  gap:14px;
 }
 .projects-section .item-title{
   font-weight:600;
 }
 .projects-section .item-header{
-  margin-bottom:4px;
+  margin-bottom:2px;
   align-items:baseline;
+  gap:14px;
 }
-.projects-section .item-meta{
-  font-size:.72rem;
-  text-transform:uppercase;
-  letter-spacing:.08em;
+.projects-section .item-header .item-links{
+  margin-top:0;
+  gap:10px;
+  margin-left:auto;
+}
+.projects-section .item-header .item-links a{
+  font-size:.82rem;
   color:var(--muted);
-  margin-bottom:0;
+  border-bottom:none;
+}
+.projects-section .item-header .item-links a:hover{
+  color:var(--accent);
 }
 .projects-section .item-desc{
-  margin:0 0 6px;
-}
-.projects-section .item-links{
-  margin-top:2px;
+  margin:0;
 }
 .awards-list{
   gap:16px;
