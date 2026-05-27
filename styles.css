@@ -321,6 +321,7 @@ h3{font-size:1.1rem;font-weight:600;margin-bottom:12px;letter-spacing:.2px}
   font-size:.96rem;
   line-height:1.65;
   max-width:65ch;
+  text-wrap:pretty;
 }
 .experience-list .item-desc{
   max-width:none;
@@ -380,6 +381,7 @@ h3{font-size:1.1rem;font-weight:600;margin-bottom:12px;letter-spacing:.2px}
 }
 .awards-list .item-desc{
   margin:4px 0;
+  text-wrap:balance;
 }
 .projects-grid{
   display:grid;
