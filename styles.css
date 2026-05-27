@@ -357,7 +357,7 @@ h3{font-size:1.1rem;font-weight:600;margin-bottom:12px;letter-spacing:.2px}
 }
 .projects-section .item-header{
   margin-bottom:2px;
-  align-items:baseline;
+  align-items:center;
   gap:14px;
 }
 .projects-section .item-header .item-links{
@@ -366,9 +366,15 @@ h3{font-size:1.1rem;font-weight:600;margin-bottom:12px;letter-spacing:.2px}
   margin-left:auto;
 }
 .projects-section .item-header .item-links a{
-  font-size:.82rem;
+  display:inline-flex;
+  align-items:center;
   color:var(--muted);
   border-bottom:none;
+}
+.projects-section .item-header .item-links a svg{
+  width:17px;
+  height:17px;
+  display:block;
 }
 .projects-section .item-header .item-links a:hover{
   color:var(--accent);
