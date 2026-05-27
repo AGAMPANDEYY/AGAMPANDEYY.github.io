@@ -861,3 +861,93 @@ h3{font-size:1.1rem;font-weight:600;margin-bottom:12px;letter-spacing:.2px}
 @media (max-width: 720px) {
   .scroll-card .news-list { max-height: 240px; }
 }
+
+/* ============================================================
+   Datasheet grid theme (bordered panels + monospace metadata)
+   ============================================================ */
+:root{ --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace; }
+
+/* --- Bordered section panels (all list/content sections; hero stays open) --- */
+#service, #projects, #publications, #experience{
+  border:1px solid var(--border);
+  border-radius:8px;
+  background:var(--surface);
+}
+#service > .container,
+#projects > .container,
+#publications > .container,
+#experience > .container{
+  padding:16px 18px 18px;
+}
+
+/* --- Mono, uppercase section headers + hairline rule --- */
+.section h2{
+  font-family:var(--mono);
+  font-size:.82rem;
+  font-weight:600;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+  color:var(--muted);
+}
+.section-divider{
+  height:1px;
+  width:100%;
+  max-width:none;
+  background:var(--border);
+  border-radius:0;
+  opacity:1;
+  margin:10px 0 16px;
+}
+
+/* --- Monospace metadata everywhere (labels/dates/venues, not prose) --- */
+.item-meta, .pub-meta, .pub-venue, .news-date{
+  font-family:var(--mono);
+  letter-spacing:.01em;
+}
+.pub-meta, .news-date, .item-meta{ font-size:.8rem; }
+.projects-column h3{
+  font-family:var(--mono);
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  font-size:.78rem;
+  color:var(--muted);
+}
+
+/* --- Facts strip (key/value datasheet) --- */
+.facts{
+  margin:18px 0 4px;
+  border:1px solid var(--border);
+  border-radius:8px;
+  overflow:hidden;
+  font-family:var(--mono);
+  font-size:.8rem;
+  background:var(--surface);
+}
+.facts .fact{
+  display:grid;
+  grid-template-columns:92px 1fr;
+  border-bottom:1px solid var(--border);
+}
+.facts .fact:last-child{ border-bottom:0; }
+.facts dt.fact-k{
+  margin:0;
+  padding:9px 12px;
+  color:var(--muted);
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  border-right:1px solid var(--border);
+  background:var(--surface-2);
+}
+.facts dd.fact-v{ margin:0; padding:9px 12px; color:var(--text); }
+
+/* --- News: scroll-card already framed; drop its border to avoid double frame --- */
+#news .scroll-card{ border:0; border-radius:0; }
+#news{
+  border:1px solid var(--border);
+  border-radius:8px;
+  background:var(--surface);
+  overflow:hidden;
+}
+#news > .container{ padding:16px 18px 8px; }
+#news .scroll-card{ background:transparent; }
+#news .scroll-card .news-list{ padding-left:0; padding-right:.5rem; }
