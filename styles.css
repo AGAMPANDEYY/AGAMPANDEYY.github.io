@@ -951,3 +951,47 @@ h3{font-size:1.1rem;font-weight:600;margin-bottom:12px;letter-spacing:.2px}
 #news > .container{ padding:16px 18px 8px; }
 #news .scroll-card{ background:transparent; }
 #news .scroll-card .news-list{ padding-left:0; padding-right:.5rem; }
+
+/* ============================================================
+   Datasheet depth: tinted backdrop + shaded panel header rows
+   ============================================================ */
+/* Page background is now a tint DIFFERENT from panels, so cards lift off it */
+:root{
+  --bg:#f4f5f7;          /* tinted backdrop */
+  --surface:#ffffff;      /* panels pop */
+  --surface-2:#eceff3;    /* header/key rows: a shade darker than panels */
+}
+:root[data-theme="dark"]{
+  --bg:#0e0e0e;          /* near-black backdrop */
+  --surface:#1a1a1b;      /* panels lifted off bg */
+  --surface-2:#242427;    /* header/key rows */
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]):not([data-theme="dark"]){
+    --bg:#0e0e0e; --surface:#1a1a1b; --surface-2:#242427;
+  }
+}
+
+/* Panels: clip children so the shaded header fills the rounded corners */
+#service, #projects, #publications, #experience, #news{ overflow:hidden; }
+
+/* Shaded header row at the top of each panel (turbopuffer-style title bar) */
+#service > .container > h2,
+#projects > .container > h2,
+#publications > .container > h2,
+#experience > .container > h2,
+#news > .container > h2{
+  margin:-16px -18px 16px;
+  padding:11px 18px;
+  background:var(--surface-2);
+  border-bottom:1px solid var(--border);
+  color:var(--muted);
+}
+#news > .container > h2{ margin-bottom:14px; }
+
+/* The cyan divider is redundant now that the header has its own rule */
+#service .section-divider,
+#projects .section-divider,
+#publications .section-divider,
+#experience .section-divider,
+#news .section-divider{ display:none; }
