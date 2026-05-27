@@ -1,3 +1,39 @@
+// Dark mode toggle (initial theme is already set pre-paint by the inline <head> script)
+const themeToggle = document.querySelector('.theme-toggle');
+const themeColorMeta = document.querySelector('meta[name="theme-color"]');
+
+function applyTheme(theme) {
+  document.documentElement.setAttribute('data-theme', theme);
+  if (themeColorMeta) {
+    themeColorMeta.setAttribute('content', theme === 'dark' ? '#161616' : '#1e3a8a');
+  }
+  if (themeToggle) {
+    themeToggle.setAttribute('aria-pressed', String(theme === 'dark'));
+    themeToggle.setAttribute('aria-label', theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme');
+  }
+}
+
+// Sync button state with whatever the head script decided
+applyTheme(document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light');
+
+if (themeToggle) {
+  themeToggle.addEventListener('click', () => {
+    const next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    applyTheme(next);
+    try { localStorage.setItem('theme', next); } catch (e) {}
+  });
+}
+
+// Follow OS changes only while the user hasn't made an explicit choice
+const darkMq = window.matchMedia('(prefers-color-scheme: dark)');
+darkMq.addEventListener('change', (e) => {
+  let stored = null;
+  try { stored = localStorage.getItem('theme'); } catch (err) {}
+  if (stored !== 'light' && stored !== 'dark') {
+    applyTheme(e.matches ? 'dark' : 'light');
+  }
+});
+
 // Mobile navigation toggle
 const toggle = document.querySelector('.nav-toggle');
 const links = document.querySelector('.nav-links');
