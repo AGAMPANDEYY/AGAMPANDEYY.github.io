@@ -960,15 +960,36 @@ h3{font-size:1.1rem;font-weight:600;margin-bottom:12px;letter-spacing:.2px}
 }
 .facts dd.fact-v{ margin:0; padding:9px 12px; color:var(--text); }
 
-/* Offset dotted "cut-line" frame around each panel (blueprint touch) */
-#service, #projects, #publications, #experience, #news{ position:relative; }
-#service::before, #projects::before,
-#publications::before, #experience::before, #news::before{
+/* Dotted drop-shadow (turbopuffer technique): a tiled-dot layer offset to the
+   bottom-right, sitting BEHIND the opaque panel so it only peeks on right+bottom */
+:root{ --dots: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4'%3E%3Ccircle cx='1' cy='1' r='1' fill='%23000'/%3E%3C/svg%3E"); }
+
+/* panels must be opaque so the dot layer is hidden except at the offset */
+#service, #projects, #publications, #experience, #news{
+  position:relative;
+  background:var(--bg);
+}
+#service::after, #projects::after,
+#publications::after, #experience::after, #news::after{
   content:"";
   position:absolute;
-  inset:-6px;
-  border:1.5px dotted var(--rule);
-  border-radius:7px;
-  pointer-events:none;
+  top:8px; left:8px; right:-8px; bottom:-8px;
   z-index:-1;
+  border-radius:4px;
+  background-color:var(--rule);
+  -webkit-mask:var(--dots) repeat;
+  mask:var(--dots) repeat;
+}
+
+/* same dotted drop-shadow on the facts strip */
+.facts{ position:relative; background:var(--bg); overflow:visible; }
+.facts::after{
+  content:"";
+  position:absolute;
+  top:8px; left:8px; right:-8px; bottom:-8px;
+  z-index:-1;
+  border-radius:4px;
+  background-color:var(--rule);
+  -webkit-mask:var(--dots) repeat;
+  mask:var(--dots) repeat;
 }
