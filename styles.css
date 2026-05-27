@@ -993,3 +993,42 @@ h3{font-size:1.1rem;font-weight:600;margin-bottom:12px;letter-spacing:.2px}
   -webkit-mask:var(--dots) repeat;
   mask:var(--dots) repeat;
 }
+
+
+/* ============================================================
+   Header — theme-aware bar with presence (crisp edge + soft lift)
+   Light: stays light, separated by a clear border + gentle shadow.
+   Dark:  stays dark, separated by a hairline + subtle shadow.
+   ============================================================ */
+:root{
+  --header-bg:rgba(255,255,255,0.80);
+  --header-shadow:0 1px 0 rgba(0,0,0,0.04), 0 6px 20px -12px rgba(0,0,0,0.18);
+}
+:root[data-theme="dark"]{
+  --header-bg:rgba(22,22,22,0.78);
+  --header-shadow:0 1px 0 rgba(0,0,0,0.6), 0 8px 24px -14px rgba(0,0,0,0.7);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]):not([data-theme="dark"]){
+    --header-bg:rgba(22,22,22,0.78);
+    --header-shadow:0 1px 0 rgba(0,0,0,0.6), 0 8px 24px -14px rgba(0,0,0,0.7);
+  }
+}
+.site-header{
+  background:var(--header-bg);
+  border-bottom:1px solid var(--rule);
+  box-shadow:var(--header-shadow);
+  backdrop-filter:saturate(180%) blur(12px);
+  -webkit-backdrop-filter:saturate(180%) blur(12px);
+}
+
+/* Subtle brand gradient keyline under the header (navy -> cyan) */
+.site-header{ position:sticky; }
+.site-header::after{
+  content:"";
+  position:absolute;
+  left:0; right:0; bottom:-1px;
+  height:2px;
+  background:linear-gradient(90deg, var(--accent), var(--divider-start));
+  opacity:.85;
+}
