@@ -959,3 +959,16 @@ h3{font-size:1.1rem;font-weight:600;margin-bottom:12px;letter-spacing:.2px}
   border-right:1px solid var(--rule); background:var(--stripe);
 }
 .facts dd.fact-v{ margin:0; padding:9px 12px; color:var(--text); }
+
+/* Offset dotted "cut-line" frame around each panel (blueprint touch) */
+#service, #projects, #publications, #experience, #news{ position:relative; }
+#service::before, #projects::before,
+#publications::before, #experience::before, #news::before{
+  content:"";
+  position:absolute;
+  inset:-6px;
+  border:1.5px dotted var(--rule);
+  border-radius:7px;
+  pointer-events:none;
+  z-index:-1;
+}
