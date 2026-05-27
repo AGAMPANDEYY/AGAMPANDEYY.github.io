@@ -861,3 +861,135 @@ h3{font-size:1.1rem;font-weight:600;margin-bottom:12px;letter-spacing:.2px}
 @media (max-width: 720px) {
   .scroll-card .news-list { max-height: 240px; }
 }
+
+
+/* ============================================================
+   Datasheet theme — fieldset-style panels (title notched into border)
+   ============================================================ */
+:root{
+  --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  --rule:#cdd2da;      /* panel border (a touch stronger than hairline) */
+  --stripe:#f6f7f9;    /* subtle zebra tint */
+}
+:root[data-theme="dark"]{ --rule:#3a3a3d; --stripe:#1c1c1c; }
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]):not([data-theme="dark"]){ --rule:#3a3a3d; --stripe:#1c1c1c; }
+}
+
+/* Monospace, uppercase labels (section titles + metadata; prose stays as-is) */
+.section h2{
+  font-family:var(--mono);
+  font-size:.8rem;
+  font-weight:700;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+.item-meta,.pub-meta,.pub-venue,.news-date{ font-family:var(--mono); letter-spacing:.01em; }
+.pub-meta,.news-date,.item-meta{ font-size:.8rem; }
+.projects-column h3{
+  font-family:var(--mono); text-transform:uppercase; letter-spacing:.1em;
+  font-size:.78rem; color:var(--muted);
+}
+
+/* Fieldset-style bordered panels */
+#service, #projects, #publications, #experience, #news{
+  border:1.5px solid var(--rule);
+  border-radius:4px;
+  background:transparent;
+  padding:0;
+  margin-top:8px;                 /* room for the legend that straddles the top edge */
+}
+#service > .container,
+#projects > .container,
+#publications > .container,
+#experience > .container,
+#news > .container{
+  padding:0 18px 18px;
+}
+/* The legend: lift the title onto the top border and mask the line behind the text */
+#service > .container > h2,
+#projects > .container > h2,
+#publications > .container > h2,
+#experience > .container > h2,
+#news > .container > h2{
+  display:inline-block;
+  margin:0 0 14px 8px;
+  transform:translateY(-50%);
+  padding:0 8px;
+  background:var(--bg);
+  color:var(--text);
+}
+.content #publications{ margin-bottom:22px; }   /* gap between stacked content panels */
+
+/* Old cyan divider not needed — the legend defines the header */
+#service .section-divider,
+#projects .section-divider,
+#publications .section-divider,
+#experience .section-divider,
+#news .section-divider{ display:none; }
+
+/* News scroll-card: drop its own frame; the panel provides it */
+#news .scroll-card{ border:0; border-radius:0; background:transparent; }
+#news .scroll-card .news-list{ padding-left:0; }
+
+/* Subtle zebra striping (datasheet texture), full-bleed within panel padding */
+.experience-list > li:nth-child(odd),
+.awards-list > li:nth-child(odd){
+  background:var(--stripe);
+  margin:0 -18px;
+  padding-left:18px;
+  padding-right:18px;
+}
+
+/* Facts strip — same bordered datasheet look */
+.facts{
+  margin:18px 0 4px;
+  border:1.5px solid var(--rule);
+  border-radius:4px;
+  overflow:hidden;
+  font-family:var(--mono);
+  font-size:.8rem;
+  background:transparent;
+}
+.facts .fact{ display:grid; grid-template-columns:92px 1fr; border-bottom:1px solid var(--rule); }
+.facts .fact:last-child{ border-bottom:0; }
+.facts dt.fact-k{
+  margin:0; padding:9px 12px; color:var(--muted);
+  text-transform:uppercase; letter-spacing:.1em;
+  border-right:1px solid var(--rule); background:var(--stripe);
+}
+.facts dd.fact-v{ margin:0; padding:9px 12px; color:var(--text); }
+
+/* Dotted drop-shadow (turbopuffer technique): a tiled-dot layer offset to the
+   bottom-right, sitting BEHIND the opaque panel so it only peeks on right+bottom */
+:root{ --dots: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4'%3E%3Ccircle cx='1' cy='1' r='1' fill='%23000'/%3E%3C/svg%3E"); }
+
+/* panels must be opaque so the dot layer is hidden except at the offset */
+#service, #projects, #publications, #experience, #news{
+  position:relative;
+  background:var(--bg);
+}
+#service::after, #projects::after,
+#publications::after, #experience::after, #news::after{
+  content:"";
+  position:absolute;
+  top:8px; left:8px; right:-8px; bottom:-8px;
+  z-index:-1;
+  border-radius:4px;
+  background-color:var(--rule);
+  -webkit-mask:var(--dots) repeat;
+  mask:var(--dots) repeat;
+}
+
+/* same dotted drop-shadow on the facts strip */
+.facts{ position:relative; background:var(--bg); overflow:visible; }
+.facts::after{
+  content:"";
+  position:absolute;
+  top:8px; left:8px; right:-8px; bottom:-8px;
+  z-index:-1;
+  border-radius:4px;
+  background-color:var(--rule);
+  -webkit-mask:var(--dots) repeat;
+  mask:var(--dots) repeat;
+}
