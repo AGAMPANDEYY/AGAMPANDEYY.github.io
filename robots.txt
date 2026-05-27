@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://agampandeyy.github.io/sitemap.xml
+Sitemap: https://agampandeyy-github-io.pages.dev/sitemap.xml
