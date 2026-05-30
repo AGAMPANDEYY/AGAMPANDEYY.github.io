@@ -367,6 +367,14 @@ h3{font-size:1.1rem;font-weight:600;margin-bottom:12px;letter-spacing:.2px}
   background:#4A4A4A;
 }
 .social-icon.x:hover svg path{ fill:#fff; }
+.social-icon.orcid:hover{
+  background:#A6CE39;
+}
+.social-icon.orcid:hover svg path{ fill:#fff; }
+.social-icon.openreview:hover{
+  background:#8C1B13;
+}
+.social-icon.openreview:hover svg path{ fill:#fff; }
 
 /* Clean List Style - NO BOXES */
 .clean-list{
