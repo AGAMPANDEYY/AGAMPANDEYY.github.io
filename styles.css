@@ -900,7 +900,7 @@ h3{font-size:1.1rem;font-weight:600;margin-bottom:12px;letter-spacing:.2px}
 }
 
 /* Fieldset-style bordered panels */
-#service, #projects, #publications, #experience, #news{
+#service, #projects, #publications, #experience, #news, #athletics{
   border:1.5px solid var(--rule);
   border-radius:4px;
   background:transparent;
@@ -911,7 +911,8 @@ h3{font-size:1.1rem;font-weight:600;margin-bottom:12px;letter-spacing:.2px}
 #projects > .container,
 #publications > .container,
 #experience > .container,
-#news > .container{
+#news > .container,
+#athletics > .container{
   padding:0 18px 18px;
 }
 /* The legend: lift the title onto the top border and mask the line behind the text */
@@ -919,7 +920,8 @@ h3{font-size:1.1rem;font-weight:600;margin-bottom:12px;letter-spacing:.2px}
 #projects > .container > h2,
 #publications > .container > h2,
 #experience > .container > h2,
-#news > .container > h2{
+#news > .container > h2,
+#athletics > .container > h2{
   display:inline-block;
   margin:0 0 14px 8px;
   transform:translateY(-50%);
@@ -927,14 +929,15 @@ h3{font-size:1.1rem;font-weight:600;margin-bottom:12px;letter-spacing:.2px}
   background:var(--bg);
   color:var(--text);
 }
-.content #publications{ margin-bottom:22px; }   /* gap between stacked content panels */
+.content #publications, .content #experience{ margin-bottom:22px; }   /* gap between stacked content panels */
 
 /* Old cyan divider not needed — the legend defines the header */
 #service .section-divider,
 #projects .section-divider,
 #publications .section-divider,
 #experience .section-divider,
-#news .section-divider{ display:none; }
+#news .section-divider,
+#athletics .section-divider{ display:none; }
 
 /* News scroll-card: drop its own frame; the panel provides it */
 #news .scroll-card{ border:0; border-radius:0; background:transparent; }
@@ -968,17 +971,51 @@ h3{font-size:1.1rem;font-weight:600;margin-bottom:12px;letter-spacing:.2px}
 }
 .facts dd.fact-v{ margin:0; padding:9px 12px; color:var(--text); }
 
+/* Athletics — compact PR cards (datasheet style) */
+.pr-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:10px; }
+.pr-card{
+  border:1.5px solid var(--rule);
+  border-radius:4px;
+  padding:14px 12px;
+  background:var(--bg);
+  text-align:center;
+  font-family:var(--mono);
+}
+.pr-card .pr-dist{
+  margin:0 0 6px; color:var(--muted);
+  text-transform:uppercase; letter-spacing:.12em; font-size:.72rem;
+}
+.pr-card .pr-time{ margin:0; color:var(--accent); font-size:1.6rem; font-weight:700; line-height:1; }
+.pr-card .pr-note{ margin:6px 0 0; color:var(--muted); font-size:.68rem; letter-spacing:.04em; }
+@media (max-width:480px){ .pr-grid{ grid-template-columns:1fr; } }
+
+/* Athletics — race photo gallery below the timing box (uniform tiles) */
+.race-gallery{ display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-top:14px; }
+.race-shot{ margin:0; }
+.race-frame{
+  position:relative; width:100%; aspect-ratio:3/4;
+  border-radius:4px; overflow:hidden; border:1.5px solid var(--rule);
+  background:var(--stripe);
+  transition:transform .2s ease, box-shadow .2s ease;
+}
+.race-frame img{
+  position:absolute; inset:0; width:100%; height:100%;
+  object-fit:cover; object-position:center; display:block;
+}
+.race-shot:hover .race-frame{ transform:translateY(-2px); box-shadow:0 4px 12px rgba(0,0,0,0.10); }
+@media (max-width:480px){ .race-gallery{ grid-template-columns:repeat(3,1fr); } }
+
 /* Dotted drop-shadow (turbopuffer technique): a tiled-dot layer offset to the
    bottom-right, sitting BEHIND the opaque panel so it only peeks on right+bottom */
 :root{ --dots: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4'%3E%3Ccircle cx='1' cy='1' r='1' fill='%23000'/%3E%3C/svg%3E"); }
 
 /* panels must be opaque so the dot layer is hidden except at the offset */
-#service, #projects, #publications, #experience, #news{
+#service, #projects, #publications, #experience, #news, #athletics{
   position:relative;
   background:var(--bg);
 }
 #service::after, #projects::after,
-#publications::after, #experience::after, #news::after{
+#publications::after, #experience::after, #news::after, #athletics::after{
   content:"";
   position:absolute;
   top:8px; left:8px; right:-8px; bottom:-8px;
