@@ -1,2 +1,5 @@
 .DS_Store
 **/.DS_Store
+
+# Full-res image sources; only the optimised webp derivatives are deployed
+assets/photos/pfp-original.png
