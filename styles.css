@@ -789,14 +789,25 @@ h3{font-size:1.1rem;font-weight:600;margin-bottom:12px;letter-spacing:.2px}
   overflow: hidden;          /* contain fades */
 }
 
-/* the actual scrollable area */
-.scroll-card .news-list {
-  max-height: 320px;         /* tweak */
+/* the actual scrollable area — height is per-section via --scroll-max */
+.scroll-card .scroll-body {
+  max-height: var(--scroll-max, 320px);
   overflow-y: auto;
   margin: 0;
   list-style: none;
   padding: .25rem 1rem;      /* room for scrollbar */
   scrollbar-gutter: stable;
+}
+
+/* Experience: taller panel, and extra top room so the first row's
+   right-aligned date clears the "Scroll" pill */
+.experience-scroll {
+  --scroll-max: 600px;
+  --scroll-max-sm: 420px;
+}
+.experience-scroll .scroll-body {
+  padding-top: 2.25rem;
+  padding-bottom: .75rem;
 }
 
 /* items */
@@ -808,11 +819,11 @@ h3{font-size:1.1rem;font-weight:600;margin-bottom:12px;letter-spacing:.2px}
 .news-date { color: var(--muted); white-space: nowrap; margin-right: .35rem; }
 
 /* Always-visible minimal scrollbar */
-.news-list { scrollbar-width: thin; scrollbar-color: var(--scrollbar) transparent; }
-.news-list::-webkit-scrollbar { width: 8px; }
-.news-list::-webkit-scrollbar-track { background: transparent; }
-.news-list::-webkit-scrollbar-thumb { background: var(--scrollbar); border-radius: 999px; }
-.news-list::-webkit-scrollbar-thumb:hover { background: var(--scrollbar-hover); }
+.scroll-body { scrollbar-width: thin; scrollbar-color: var(--scrollbar) transparent; }
+.scroll-body::-webkit-scrollbar { width: 8px; }
+.scroll-body::-webkit-scrollbar-track { background: transparent; }
+.scroll-body::-webkit-scrollbar-thumb { background: var(--scrollbar); border-radius: 999px; }
+.scroll-body::-webkit-scrollbar-thumb:hover { background: var(--scrollbar-hover); }
 
 /* Top/bottom gradient fades as affordances */
 .scroll-card::before,
@@ -867,7 +878,7 @@ h3{font-size:1.1rem;font-weight:600;margin-bottom:12px;letter-spacing:.2px}
 
 /* Mobile: shorter panel */
 @media (max-width: 720px) {
-  .scroll-card .news-list { max-height: 240px; }
+  .scroll-card .scroll-body { max-height: var(--scroll-max-sm, 240px); }
 }
 
 

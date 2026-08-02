@@ -130,7 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const cards = document.querySelectorAll('[data-scroll]');
 
   cards.forEach(card => {
-    const scroller = card.querySelector('.news-list');
+    const scroller = card.querySelector('.scroll-body');
     if (!scroller) return;
 
     const update = () => {
