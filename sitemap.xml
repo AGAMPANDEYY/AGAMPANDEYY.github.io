@@ -3,12 +3,12 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://agampandeyy-github-io.pages.dev/</loc>
-    <lastmod>2026-08-03</lastmod>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://agampandeyy-github-io.pages.dev/assets/photos/pfp.webp</image:loc>
-      <image:title>Agam Pandey, Founding AI Researcher</image:title>
+      <image:loc>https://agampandeyy-github-io.pages.dev/assets/photos/pfp-mem0.webp</image:loc>
+      <image:title>Agam Pandey, Applied AI Researcher and Member of Technical Staff at Mem0</image:title>
     </image:image>
     <image:image>
       <image:loc>https://agampandeyy-github-io.pages.dev/assets/pubs/recropa-960.webp</image:loc>
