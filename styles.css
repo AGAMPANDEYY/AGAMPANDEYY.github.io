@@ -654,6 +654,9 @@ h3{font-size:1.1rem;font-weight:600;margin-bottom:12px;letter-spacing:.2px}
   .section{padding:22px 0}
   .headshot.round{width:160px;height:160px}
   .hero-title{font-size:32px}
+  .hero-subline{display:block;width:100%}
+  .hero-subtitle{max-width:100%;white-space:normal}
+  .hero-subline .social-text{margin-top:10px}
   .company-logo{width:40px;height:40px}
   .exp-header{gap:10px}
   .item-title{font-size:1rem}

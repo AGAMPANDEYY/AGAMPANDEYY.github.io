@@ -1,0 +1,14 @@
+/
+  Link: <https://agampandey.com/>; rel="canonical"
+  X-Robots-Tag: index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: DENY
+  Permissions-Policy: camera=(), geolocation=(), microphone=()
+
+/index.html
+  Link: <https://agampandey.com/>; rel="canonical"
+
+/assets/AgamPandey.pdf
+  Link: <https://agampandey.com/assets/AgamPandey.pdf>; rel="canonical"
+  X-Robots-Tag: index, follow

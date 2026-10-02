@@ -4,21 +4,22 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="google-site-verification" content="AENt6nhlMRjTKrDk8dvHItSjWiHQhO2gDNcXjdzVQt0" />
-  <title>Agam Pandey — Applied AI Researcher &amp; MTS at Mem0</title>
-  <meta name="description" content="Agam Pandey, Applied AI Researcher and Member of Technical Staff at Mem0. Agentic memory, retrieval, evals, and multimodal safety. ICML, NeurIPS, AAAI, TMLR." />
+  <title>Agam Pandey | Applied AI Researcher &amp; MTS at Mem0</title>
+  <meta name="description" content="Agam Pandey is an Applied AI Researcher at Mem0, building memory, information retrieval, evaluation, and multimodal safety systems for AI agents." />
   <meta name="author" content="Agam Pandey" />
   <meta name="keywords" content="Agam Pandey, Applied AI Researcher, Member of Technical Staff, MTS, Mem0, Scriben, South Park Commons, IIT Roorkee, information retrieval, retrieval augmented generation, evaluation and benchmarking, multimodal safety, vision-language models, VLM, adversarial machine learning, AI agents, agentic memory, machine learning research" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-  <link rel="canonical" href="https://agampandeyy-github-io.pages.dev/" />
+  <link rel="canonical" href="https://agampandey.com/" />
   <meta property="og:site_name" content="Agam Pandey" />
-  <meta property="og:title" content="Agam Pandey — Applied AI Researcher &amp; MTS at Mem0" />
-  <meta property="og:description" content="Applied AI Researcher and Member of Technical Staff at Mem0. Agentic memory, information retrieval, evals, and multimodal safety/robustness. Published at ICML, NeurIPS, AAAI, and TMLR." />
+  <meta property="og:title" content="Agam Pandey | Applied AI Researcher &amp; MTS at Mem0" />
+  <meta property="og:description" content="Applied AI researcher building memory, retrieval, and evaluation systems for AI agents at Mem0. Research spanning multimodal safety, VLMs, and adversarial machine learning." />
   <meta property="og:type" content="profile" />
   <meta property="profile:first_name" content="Agam" />
   <meta property="profile:last_name" content="Pandey" />
   <meta property="og:locale" content="en_US" />
-  <meta property="og:url" content="https://agampandeyy-github-io.pages.dev/" />
-  <meta property="og:image" content="https://agampandeyy-github-io.pages.dev/assets/photos/og-mem0.jpg" />
+  <meta property="og:url" content="https://agampandey.com/" />
+  <meta property="og:image" content="https://agampandey.com/assets/photos/og-mem0.jpg" />
+  <meta property="og:image:secure_url" content="https://agampandey.com/assets/photos/og-mem0.jpg" />
   <meta property="og:image:type" content="image/jpeg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -26,14 +27,25 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@AgamPandeyy" />
   <meta name="twitter:creator" content="@AgamPandeyy" />
-  <meta name="twitter:title" content="Agam Pandey — Applied AI Researcher &amp; MTS at Mem0" />
-  <meta name="twitter:description" content="Applied AI Researcher and Member of Technical Staff at Mem0. Agentic memory, information retrieval, evals, and multimodal safety/robustness. Published at ICML, NeurIPS, AAAI, and TMLR." />
-  <meta name="twitter:image" content="https://agampandeyy-github-io.pages.dev/assets/photos/og-mem0.jpg" />
+  <meta name="twitter:domain" content="agampandey.com" />
+  <meta name="twitter:url" content="https://agampandey.com/" />
+  <meta name="twitter:title" content="Agam Pandey | Applied AI Researcher &amp; MTS at Mem0" />
+  <meta name="twitter:description" content="Applied AI researcher building memory, retrieval, and evaluation systems for AI agents at Mem0. Research spanning multimodal safety, VLMs, and adversarial machine learning." />
+  <meta name="twitter:image" content="https://agampandey.com/assets/photos/og-mem0.jpg" />
   <meta name="twitter:image:alt" content="Agam Pandey, Applied AI Researcher and Member of Technical Staff at Mem0" />
   <meta name="theme-color" content="#1e3a8a">
   <script>
-    // Set theme before first paint to avoid any flash (FOUC).
+    // Send visitors from legacy profile hosts to the canonical domain while
+    // preserving project pages such as /sage-mem/ on GitHub Pages.
     (function () {
+      var legacyHosts = ['agampandeyy.github.io', 'agampandeyy-github-io.pages.dev'];
+      if (legacyHosts.indexOf(window.location.hostname) !== -1 &&
+          (window.location.pathname === '/' || window.location.pathname === '/index.html')) {
+        window.location.replace('https://agampandey.com/' + window.location.search + window.location.hash);
+        return;
+      }
+
+      // Set theme before first paint to avoid any flash (FOUC).
       try {
         var stored = localStorage.getItem('theme');
         var theme = (stored === 'light' || stored === 'dark')
@@ -57,19 +69,21 @@
     "@graph": [
       {
         "@type": "Person",
-        "@id": "https://agampandeyy-github-io.pages.dev/#agam",
+        "@id": "https://agampandey.com/#agam",
         "name": "Agam Pandey",
         "givenName": "Agam",
         "familyName": "Pandey",
-        "url": "https://agampandeyy-github-io.pages.dev/",
-        "image": "https://agampandeyy-github-io.pages.dev/assets/photos/pfp-mem0.webp",
+        "url": "https://agampandey.com/",
+        "image": "https://agampandey.com/assets/photos/pfp-mem0.webp",
         "alternateName": ["A. Pandey", "Agam Pandeyy"],
+        "identifier": "ORCID: 0009-0008-0754-1623",
         "email": "mailto:agam.pandeyy@gmail.com",
         "jobTitle": "Applied AI Researcher | Member of Technical Staff",
         "description": "Applied AI Researcher and Member of Technical Staff at Mem0 working on agentic memory, information retrieval and search, evaluation and benchmarking, and production AI systems.",
-        "worksFor": { "@id": "https://agampandeyy-github-io.pages.dev/#mem0" },
-        "affiliation": { "@id": "https://agampandeyy-github-io.pages.dev/#mem0" },
-        "alumniOf": { "@id": "https://agampandeyy-github-io.pages.dev/#iitr" },
+        "mainEntityOfPage": { "@id": "https://agampandey.com/#profilepage" },
+        "worksFor": { "@id": "https://agampandey.com/#mem0" },
+        "affiliation": { "@id": "https://agampandey.com/#mem0" },
+        "alumniOf": { "@id": "https://agampandey.com/#iitr" },
         "hasOccupation": {
           "@type": "Occupation",
           "name": "AI Researcher",
@@ -105,14 +119,14 @@
           "https://scholar.google.com/citations?user=K6IhmxoAAAAJ&hl=en",
           "https://orcid.org/0009-0008-0754-1623",
           "https://openreview.net/profile?id=~Agam_Pandey1",
-          "https://www.linkedin.com/in/agam-pandey-326161223/",
+          "https://www.linkedin.com/in/agam-pandeyy/",
           "https://x.com/AgamPandeyy",
           "https://huggingface.co/AgamP"
         ]
       },
       {
         "@type": "Organization",
-        "@id": "https://agampandeyy-github-io.pages.dev/#scriben",
+        "@id": "https://agampandey.com/#scriben",
         "name": "Scriben",
         "url": "https://home.scriben.ai/",
         "description": "Speech-native memory for knowledge work, backed by South Park Commons.",
@@ -120,100 +134,100 @@
       },
       {
         "@type": "Organization",
-        "@id": "https://agampandeyy-github-io.pages.dev/#mem0",
+        "@id": "https://agampandey.com/#mem0",
         "name": "Mem0",
         "url": "https://mem0.ai/",
         "description": "A memory layer for AI applications and agents."
       },
       {
         "@type": "CollegeOrUniversity",
-        "@id": "https://agampandeyy-github-io.pages.dev/#iitr",
+        "@id": "https://agampandey.com/#iitr",
         "name": "Indian Institute of Technology Roorkee",
         "alternateName": "IIT Roorkee",
         "url": "https://www.iitr.ac.in/"
       },
       {
         "@type": "WebSite",
-        "@id": "https://agampandeyy-github-io.pages.dev/#website",
-        "url": "https://agampandeyy-github-io.pages.dev/",
+        "@id": "https://agampandey.com/#website",
+        "url": "https://agampandey.com/",
         "name": "Agam Pandey",
         "description": "Personal site of Agam Pandey, Applied AI Researcher and Member of Technical Staff at Mem0.",
         "inLanguage": "en",
-        "publisher": { "@id": "https://agampandeyy-github-io.pages.dev/#agam" }
+        "publisher": { "@id": "https://agampandey.com/#agam" }
       },
       {
         "@type": "ProfilePage",
-        "@id": "https://agampandeyy-github-io.pages.dev/#profilepage",
-        "url": "https://agampandeyy-github-io.pages.dev/",
-        "name": "Agam Pandey — Applied AI Researcher and MTS at Mem0",
-        "isPartOf": { "@id": "https://agampandeyy-github-io.pages.dev/#website" },
-        "about": { "@id": "https://agampandeyy-github-io.pages.dev/#agam" },
-        "mainEntity": { "@id": "https://agampandeyy-github-io.pages.dev/#agam" },
+        "@id": "https://agampandey.com/#profilepage",
+        "url": "https://agampandey.com/",
+        "name": "Agam Pandey | Applied AI Researcher and MTS at Mem0",
+        "isPartOf": { "@id": "https://agampandey.com/#website" },
+        "about": { "@id": "https://agampandey.com/#agam" },
+        "mainEntity": { "@id": "https://agampandey.com/#agam" },
         "dateModified": "2026-10-02",
         "inLanguage": "en"
       },
       {
         "@type": "ScholarlyArticle",
-        "@id": "https://agampandeyy-github-io.pages.dev/#before-it-persists",
+        "@id": "https://agampandey.com/#before-it-persists",
         "name": "Before It Persists: Write-Time Defense for Multimodal Agent Memory",
-        "author": { "@id": "https://agampandeyy-github-io.pages.dev/#agam" },
+        "author": { "@id": "https://agampandey.com/#agam" },
         "datePublished": "2026",
         "url": "https://openreview.net/forum?id=6lJ6J3dDOx",
-        "image": "https://agampandeyy-github-io.pages.dev/assets/pubs/icml-640.webp",
+        "image": "https://agampandey.com/assets/pubs/icml-640.webp",
         "about": ["Agentic Memory", "Multimodal Safety", "AI Agents"],
         "isPartOf": { "@type": "Periodical", "name": "SCALE Workshop, ICML 2026" }
       },
       {
         "@type": "ScholarlyArticle",
-        "@id": "https://agampandeyy-github-io.pages.dev/#scene-graph-cot",
+        "@id": "https://agampandey.com/#scene-graph-cot",
         "name": "Zero-Shot Vision Language Reasoning via Dual-layer Scene Graph Chain-of-Thought",
-        "author": { "@id": "https://agampandeyy-github-io.pages.dev/#agam" },
+        "author": { "@id": "https://agampandey.com/#agam" },
         "datePublished": "2026",
         "url": "https://ojs.aaai.org/index.php/AAAI/article/view/42188",
-        "image": "https://agampandeyy-github-io.pages.dev/assets/pubs/scene-graph-cot-640.webp",
+        "image": "https://agampandey.com/assets/pubs/scene-graph-cot-640.webp",
         "about": ["Vision-Language Models", "Scene Graphs", "Chain-of-Thought Reasoning"],
         "isPartOf": { "@type": "Periodical", "name": "AAAI-26 Student Abstract and Poster Program" }
       },
       {
         "@type": "ScholarlyArticle",
-        "@id": "https://agampandeyy-github-io.pages.dev/#transpatch",
+        "@id": "https://agampandey.com/#transpatch",
         "name": "TransPatch: Learning a Universal Adversarial Patch for ViT-CNN Cross-Architecture Transfer in Semantic Segmentation",
-        "author": { "@id": "https://agampandeyy-github-io.pages.dev/#agam" },
+        "author": { "@id": "https://agampandey.com/#agam" },
         "datePublished": "2026",
         "url": "https://aaai.org/conference/aaai/aaai-26/student-abstract-and-poster-program-call/",
-        "image": "https://agampandeyy-github-io.pages.dev/assets/pubs/transpatch-640.webp",
+        "image": "https://agampandey.com/assets/pubs/transpatch-640.webp",
         "about": ["Adversarial Machine Learning", "Semantic Segmentation", "Vision Transformers"],
         "isPartOf": { "@type": "Periodical", "name": "AAAI-26 Student Abstract and Poster Program" }
       },
       {
         "@type": "ScholarlyArticle",
-        "@id": "https://agampandeyy-github-io.pages.dev/#recropa",
+        "@id": "https://agampandey.com/#recropa",
         "name": "Revisiting CroPA: Enhancing Cross-Prompt Adversarial Transferability",
-        "author": { "@id": "https://agampandeyy-github-io.pages.dev/#agam" },
+        "author": { "@id": "https://agampandey.com/#agam" },
         "datePublished": "2025",
         "url": "https://openreview.net/forum?id=5L90cl0xtf",
         "sameAs": "https://openreview.net/pdf?id=5L90cl0xtf",
-        "image": "https://agampandeyy-github-io.pages.dev/assets/pubs/recropa-640.webp",
+        "image": "https://agampandey.com/assets/pubs/recropa-640.webp",
         "award": "Best Paper Award",
         "isPartOf": { "@type": "Periodical", "name": "Transactions on Machine Learning Research (TMLR) / MLRC 2025" }
       },
       {
         "@type": "ScholarlyArticle",
-        "@id": "https://agampandeyy-github-io.pages.dev/#cropa-plus",
+        "@id": "https://agampandey.com/#cropa-plus",
         "name": "CroPA++: Exposing Vulnerabilities in Vision-Language Models",
-        "author": { "@id": "https://agampandeyy-github-io.pages.dev/#agam" },
+        "author": { "@id": "https://agampandey.com/#agam" },
         "datePublished": "2025",
         "url": "https://openreview.net/pdf?id=gKtyvblq0Y",
-        "image": "https://agampandeyy-github-io.pages.dev/assets/pubs/cropa-plus-640.webp",
+        "image": "https://agampandey.com/assets/pubs/cropa-plus-640.webp",
         "isPartOf": { "@type": "Periodical", "name": "NeurIPS 2025 Reliable ML Workshop" }
       },
       {
         "@type": "ScholarlyArticle",
-        "@id": "https://agampandeyy-github-io.pages.dev/#steggnn",
+        "@id": "https://agampandey.com/#steggnn",
         "name": "StegGNN: Learning Graphical Representation for Image Steganography",
-        "author": { "@id": "https://agampandeyy-github-io.pages.dev/#agam" },
+        "author": { "@id": "https://agampandey.com/#agam" },
         "url": "https://openreview.net/forum?id=UpCzCC4hCn",
-        "image": "https://agampandeyy-github-io.pages.dev/assets/pubs/steggnn-640.webp",
+        "image": "https://agampandey.com/assets/pubs/steggnn-640.webp",
         "isPartOf": { "@type": "Periodical", "name": "ICCV CV4DC Workshop (under revision)" }
       }
     ]
@@ -257,7 +271,7 @@
       <img src="assets/photos/pfp-mem0.webp" alt="Agam Pandey, Applied AI Researcher and Member of Technical Staff at Mem0" class="headshot round" loading="eager" decoding="async" width="1200" height="1200">
       <h1 class="hero-title">Agam Pandey</h1>
       <div class="hero-subline">
-        <p class="hero-subtitle">Applied AI Researcher · Member of Technical Staff</p>
+        <p class="hero-subtitle">Applied AI Researcher · Member of Technical Staff at Mem0</p>
         <div class="social-text" aria-label="Profiles and contact">
           <a href="mailto:agam.pandeyy@gmail.com" class="social-icon gmail" aria-label="Gmail">
             <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
@@ -274,7 +288,7 @@
               <path fill="#181717" d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
             </svg>
           </a>
-          <a href="https://www.linkedin.com/in/agam-pandey-326161223/" target="_blank" rel="me noopener" class="social-icon linkedin" aria-label="LinkedIn">
+          <a href="https://www.linkedin.com/in/agam-pandeyy/" target="_blank" rel="me noopener" class="social-icon linkedin" aria-label="LinkedIn">
             <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
               <path fill="#0A66C2" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
             </svg>
@@ -298,7 +312,7 @@
       </div>
 
       <p>
-        I’m an Applied AI Researcher and Member of Technical Staff at <a href="https://mem0.ai/" target="_blank" rel="noopener">Mem0</a>, and a 2026 graduate of <a href="https://www.iitr.ac.in/">IIT Roorkee</a>. My work spans agentic memory, information retrieval, evals &amp; benchmarking, and multimodal safety/robustness for production AI systems.
+        I build and study memory, retrieval, and evaluation systems for AI agents. I’m an Applied AI Researcher and Member of Technical Staff at <a href="https://mem0.ai/" target="_blank" rel="noopener">Mem0</a>, and a 2026 graduate of <a href="https://www.iitr.ac.in/">IIT Roorkee</a>. My work spans agentic memory, retrieval-augmented generation, semantic search and reranking, LLM evaluation, and multimodal safety for production AI systems.
       </p>
       <p>
         Previously, I was a Founding Engineer at <a href="https://home.scriben.ai/" target="_blank" rel="noopener">Scriben</a>, backed by <a href="https://www.southparkcommons.com/" target="_blank" rel="noopener">South Park Commons</a>, and worked at <a href="https://www.swiggy.com/">Swiggy</a>, <a href="https://akki.ai/">Akki AI</a>, <a href="https://www.ezaix.com/">EzAIx</a>, <a href="https://www.mindshiftnow.in/">Mindshift Analytics</a>, and <a href="https://efkonindia.com/">Strabag Efkon India</a>. My work has appeared at <a href="https://scale-icml-2026.github.io/">ICML-SCALE</a>, <a href="https://neurips.cc/virtual/2025/workshop/109580">NeurIPS-RML</a>, <a href="https://reproml.org/">MLRC</a>, <a href="https://jmlr.org/tmlr/">TMLR</a>, and <a href="https://aaai.org/conference/aaai/aaai-26/student-abstract-and-poster-program-call/">AAAI-SAPP</a>. Off the clock, I run middle/long distance with <a href="https://www.instagram.com/athletics_iitr/?hl=en">Athletics Team IIT Roorkee</a> and contribute to <a href="https://dsgiitr.in/">Data Science Group</a>.
@@ -309,7 +323,7 @@
         <div class="fact"><dt class="fact-k">Org</dt><dd class="fact-v">Mem0 · ex-Scriben · ex-Swiggy</dd></div>
         <div class="fact"><dt class="fact-k">Focus</dt><dd class="fact-v">Agentic memory · information retrieval · evals · multimodal safety</dd></div>
         <div class="fact"><dt class="fact-k">Venues</dt><dd class="fact-v">ICML · NeurIPS · AAAI · TMLR</dd></div>
-        <div class="fact"><dt class="fact-k">Base</dt><dd class="fact-v">IIT Roorkee</dd></div>
+        <div class="fact"><dt class="fact-k">Education</dt><dd class="fact-v">IIT Roorkee · Class of 2026</dd></div>
       </dl>
 
       </div>

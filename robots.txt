@@ -55,4 +55,4 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
-Sitemap: https://agampandeyy-github-io.pages.dev/sitemap.xml
+Sitemap: https://agampandey.com/sitemap.xml

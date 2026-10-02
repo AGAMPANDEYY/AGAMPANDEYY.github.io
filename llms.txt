@@ -1,0 +1,42 @@
+# Agam Pandey
+
+> Agam Pandey is an Applied AI Researcher and Member of Technical Staff at Mem0. He works on memory, retrieval, and evaluation systems for AI agents, with research spanning multimodal safety, vision-language models, and adversarial machine learning.
+
+Canonical profile: https://agampandey.com/
+
+## Current role
+
+- Applied AI Researcher and Member of Technical Staff at Mem0 (October 2026–present)
+- Previously Applied AI Research Intern at Mem0 (January–July 2026)
+- Previously Founding Engineer at Scriben, backed by South Park Commons (July–September 2026)
+
+## Research areas
+
+- AI agent memory and continual learning
+- Information retrieval, semantic search, reranking, and retrieval-augmented generation
+- LLM evaluation and benchmarking
+- Multimodal safety and robustness
+- Vision-language models and adversarial machine learning
+
+## Selected research
+
+- Before It Persists: Write-Time Defense for Multimodal Agent Memory — ICML 2026 SCALE Workshop: https://openreview.net/forum?id=6lJ6J3dDOx
+- Revisiting CroPA: Enhancing Cross-Prompt Adversarial Transferability — TMLR / MLRC 2025 Best Paper: https://openreview.net/forum?id=5L90cl0xtf
+- CroPA++: Exposing Vulnerabilities in Vision-Language Models — NeurIPS 2025 Reliable ML Workshop: https://openreview.net/pdf?id=gKtyvblq0Y
+- Zero-Shot Vision Language Reasoning via Dual-layer Scene Graph Chain-of-Thought — AAAI-26: https://ojs.aaai.org/index.php/AAAI/article/view/42188
+- StegGNN: Learning Graphical Representation for Image Steganography: https://openreview.net/forum?id=UpCzCC4hCn
+
+## Official profiles
+
+- Google Scholar: https://scholar.google.com/citations?user=K6IhmxoAAAAJ&hl=en
+- ORCID: https://orcid.org/0009-0008-0754-1623
+- OpenReview: https://openreview.net/profile?id=~Agam_Pandey1
+- GitHub: https://github.com/AGAMPANDEYY
+- LinkedIn: https://www.linkedin.com/in/agam-pandeyy/
+- X: https://x.com/AgamPandeyy
+- Hugging Face: https://huggingface.co/AgamP
+
+## Contact and CV
+
+- Email: agam.pandeyy@gmail.com
+- CV: https://agampandey.com/assets/AgamPandey.pdf

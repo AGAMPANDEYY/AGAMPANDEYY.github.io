@@ -2,41 +2,41 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://agampandeyy-github-io.pages.dev/</loc>
+    <loc>https://agampandey.com/</loc>
     <lastmod>2026-10-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://agampandeyy-github-io.pages.dev/assets/photos/pfp-mem0.webp</image:loc>
+      <image:loc>https://agampandey.com/assets/photos/pfp-mem0.webp</image:loc>
       <image:title>Agam Pandey, Applied AI Researcher and Member of Technical Staff at Mem0</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://agampandeyy-github-io.pages.dev/assets/pubs/recropa-960.webp</image:loc>
+      <image:loc>https://agampandey.com/assets/pubs/recropa-960.webp</image:loc>
       <image:title>Revisiting CroPA: Enhancing Cross-Prompt Adversarial Transferability</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://agampandeyy-github-io.pages.dev/assets/pubs/icml-960.webp</image:loc>
+      <image:loc>https://agampandey.com/assets/pubs/icml-960.webp</image:loc>
       <image:title>Before It Persists: Write-Time Defense for Multimodal Agent Memory</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://agampandeyy-github-io.pages.dev/assets/pubs/cropa-plus-960.webp</image:loc>
+      <image:loc>https://agampandey.com/assets/pubs/cropa-plus-960.webp</image:loc>
       <image:title>CroPA++: Exposing Vulnerabilities in Vision-Language Models</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://agampandeyy-github-io.pages.dev/assets/pubs/scene-graph-cot-960.webp</image:loc>
+      <image:loc>https://agampandey.com/assets/pubs/scene-graph-cot-960.webp</image:loc>
       <image:title>Zero-Shot Vision Language Reasoning via Dual-layer Scene Graph Chain-of-Thought</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://agampandeyy-github-io.pages.dev/assets/pubs/transpatch-960.webp</image:loc>
+      <image:loc>https://agampandey.com/assets/pubs/transpatch-960.webp</image:loc>
       <image:title>TransPatch: Universal Adversarial Patch for ViT-CNN Cross-Architecture Transfer</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://agampandeyy-github-io.pages.dev/assets/pubs/steggnn-960.webp</image:loc>
+      <image:loc>https://agampandey.com/assets/pubs/steggnn-960.webp</image:loc>
       <image:title>StegGNN: Learning Graphical Representation for Image Steganography</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://agampandeyy-github-io.pages.dev/assets/AgamPandey.pdf</loc>
+    <loc>https://agampandey.com/assets/AgamPandey.pdf</loc>
     <lastmod>2026-08-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>

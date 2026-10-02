@@ -1,5 +1,6 @@
-# agampandey.github.io
-portfolio
+# agampandey.com
+
+Personal website of Agam Pandey, deployed on Cloudflare Pages at <https://agampandey.com/>.
 
 ## Run locally
 
