@@ -17,6 +17,13 @@
   --scrollbar-hover:#aeb4bc;
   --divider-start:#06b6d4;
   --divider-end:rgba(6,182,212,0);
+  --social-gmail:#d93025;
+  --social-scholar:#1a73e8;
+  --social-github:#24292f;
+  --social-linkedin:#0a66c2;
+  --social-x:#0f1419;
+  --social-orcid:#5f7800;
+  --social-openreview:#8c1b13;
   --container: 1380px;
 }
 
@@ -37,6 +44,13 @@
   --header-bg:rgba(20,20,20,.9);
   --scrollbar:#3f3f46;
   --scrollbar-hover:#52525b;
+  --social-gmail:#ff8a80;
+  --social-scholar:#8ab4f8;
+  --social-github:#f0f6fc;
+  --social-linkedin:#70b7ff;
+  --social-x:#f2f2f2;
+  --social-orcid:#b6d957;
+  --social-openreview:#ef8179;
 }
 
 /* No-JS fallback: honor system preference unless an explicit choice is set */
@@ -58,6 +72,13 @@
     --header-bg:rgba(20,20,20,.9);
     --scrollbar:#3f3f46;
     --scrollbar-hover:#52525b;
+    --social-gmail:#ff8a80;
+    --social-scholar:#8ab4f8;
+    --social-github:#f0f6fc;
+    --social-linkedin:#70b7ff;
+    --social-x:#f2f2f2;
+    --social-orcid:#b6d957;
+    --social-openreview:#ef8179;
   }
 }
 
@@ -342,33 +363,40 @@ h3{font-size:1.1rem;font-weight:600;margin-bottom:12px;letter-spacing:.2px}
   display:block;
   transition:all .2s ease;
 }
+.social-icon.gmail svg path{fill:var(--social-gmail)}
+.social-icon.scholar svg path{fill:var(--social-scholar)}
+.social-icon.github svg path{fill:var(--social-github)}
+.social-icon.linkedin svg path{fill:var(--social-linkedin)}
+.social-icon.x svg path{fill:var(--social-x)}
+.social-icon.orcid svg path{fill:var(--social-orcid)}
+.social-icon.openreview svg path{fill:var(--social-openreview)}
 .social-icon:hover{
   transform:translateY(-2px);
   box-shadow:0 4px 12px rgba(0,0,0,0.15);
   border-color:transparent;
 }
 .social-icon.gmail:hover{
-  background:#F36C61;
+  background:#b3261e;
 }
 .social-icon.gmail:hover svg path{ fill:#fff; }
 .social-icon.scholar:hover{
-  background:#6AA6FF;
+  background:#185abc;
 }
 .social-icon.scholar:hover svg path{ fill:#fff; }
 .social-icon.github:hover{
-  background:#4A4A4A;
+  background:#3d444d;
 }
 .social-icon.github:hover svg path{ fill:#fff; }
 .social-icon.linkedin:hover{
-  background:#3A8AD6;
+  background:#0a66c2;
 }
 .social-icon.linkedin:hover svg path{ fill:#fff; }
 .social-icon.x:hover{
-  background:#4A4A4A;
+  background:#24292f;
 }
 .social-icon.x:hover svg path{ fill:#fff; }
 .social-icon.orcid:hover{
-  background:#A6CE39;
+  background:#536b00;
 }
 .social-icon.orcid:hover svg path{ fill:#fff; }
 .social-icon.openreview:hover{
