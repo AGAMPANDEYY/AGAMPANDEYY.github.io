@@ -557,6 +557,34 @@ h3{font-size:1.1rem;font-weight:600;margin-bottom:12px;letter-spacing:.2px}
   padding:0;
   line-height:1.45;
 }
+.experience-list .exp-points{
+  display:grid;
+  gap:4px;
+}
+.experience-list .exp-point{
+  position:relative;
+  padding-left:14px;
+}
+.experience-list .exp-point::before{
+  content:"–";
+  position:absolute;
+  left:0;
+}
+.experience-list .info-mark{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:1.1em;
+  height:1.1em;
+  margin-right:5px;
+  border:1px solid currentColor;
+  border-radius:50%;
+  color:var(--muted);
+  font-family:var(--mono);
+  font-size:.78em;
+  line-height:1;
+  vertical-align:.08em;
+}
 
 @media (max-width: 600px){
   .experience-list li{
@@ -1013,8 +1041,8 @@ h3{font-size:1.1rem;font-weight:600;margin-bottom:12px;letter-spacing:.2px}
 
 .long-run-banner{
   margin:14px auto 0;
-  width:min(100%, 620px);
-  max-width:100%;
+  width:100%;
+  max-width:none;
   min-width:0;
   overflow:hidden;
   border-radius:4px;
