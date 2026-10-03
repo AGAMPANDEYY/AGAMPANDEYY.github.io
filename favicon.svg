@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Agam Pandey">
+  <defs>
+    <linearGradient id="background" x1="64" y1="40" x2="448" y2="472" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#b8f6e9"/>
+      <stop offset="0.48" stop-color="#75bdf5"/>
+      <stop offset="1" stop-color="#7668dc"/>
+    </linearGradient>
+    <linearGradient id="highlight" x1="120" y1="88" x2="386" y2="420" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ffffff" stop-opacity="0.24"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="116" fill="url(#background)"/>
+  <path d="M58 196C120 94 231 48 347 72c50 10 87 35 113 68v-24c0-35-29-64-64-64H116c-35 0-64 29-64 64v292c0 29 19 53 45 61-61-70-72-179-39-273Z" fill="url(#highlight)"/>
+  <path fill="#10223f" fill-rule="evenodd" d="M256 92 414 420h-78l-34-78h-94l-34 78H96L256 92Zm0 127-28 65h56l-28-65Z"/>
+</svg>
