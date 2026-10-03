@@ -1012,18 +1012,13 @@ h3{font-size:1.1rem;font-weight:600;margin-bottom:12px;letter-spacing:.2px}
 @media (max-width:480px){ .race-gallery{ grid-template-columns:repeat(3,1fr); } }
 
 .long-run-banner{
-  margin:14px 0 0;
-  border:1.5px solid var(--rule);
-  border-radius:4px;
-  overflow:hidden;
-  background:var(--stripe);
+  margin:14px auto 0;
+  max-width:620px;
 }
 .long-run-banner img{
   display:block;
   width:100%;
   height:auto;
-  aspect-ratio:20 / 7;
-  object-fit:cover;
 }
 
 /* Dotted drop-shadow (turbopuffer technique): a tiled-dot layer offset to the
