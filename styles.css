@@ -521,10 +521,9 @@ h3{font-size:1.1rem;font-weight:600;margin-bottom:12px;letter-spacing:.2px}
   width:40px;
   height:40px;
   object-fit:contain;
-  border-radius:8px;
-  border:1px solid var(--border);
-  padding:6px;
-  background:var(--logo-bg);
+  border:0;
+  padding:0;
+  background:transparent;
   flex-shrink:0;
 }
 
@@ -567,7 +566,6 @@ h3{font-size:1.1rem;font-weight:600;margin-bottom:12px;letter-spacing:.2px}
   .experience-list .company-logo{
     width:36px;
     height:36px;
-    padding:4px;
   }
 }
 
@@ -588,10 +586,9 @@ h3{font-size:1.1rem;font-weight:600;margin-bottom:12px;letter-spacing:.2px}
   width:40px;
   height:40px;
   object-fit:contain;
-  border-radius:8px;
-  border:1px solid var(--border);
-  padding:6px;
-  background:var(--logo-bg);
+  border:0;
+  padding:0;
+  background:transparent;
   flex-shrink:0;
 }
 .awards-list .exp-title-group{
@@ -627,7 +624,6 @@ h3{font-size:1.1rem;font-weight:600;margin-bottom:12px;letter-spacing:.2px}
   .awards-list .company-logo{
     width:36px;
     height:36px;
-    padding:4px;
   }
 }
 
