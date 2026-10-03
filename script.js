@@ -74,6 +74,19 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   });
 });
 
+// Offset direct hash navigation so anchored sections are not hidden by the
+// sticky header (for shared links and browser reloads).
+window.addEventListener('load', () => {
+  const id = window.location.hash.slice(1);
+  const el = id ? document.getElementById(id) : null;
+  if (!el) return;
+  const headerOffset = document.querySelector('.site-header')?.offsetHeight || 0;
+  window.scrollTo({
+    top: el.getBoundingClientRect().top + window.pageYOffset - headerOffset,
+    behavior: 'auto'
+  });
+});
+
 // Active section highlighting in navigation
 const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('.nav-link');
@@ -101,6 +114,44 @@ function updateActiveNav() {
 window.addEventListener('scroll', updateActiveNav);
 // Update on load
 window.addEventListener('load', updateActiveNav);
+
+// Keep the lower desktop panels aligned without forcing a tall Athletics image.
+// The image fills only the space left below the race gallery; stacked layouts
+// return to their natural responsive height.
+const projectsPanel = document.getElementById('projects');
+const athleticsPanel = document.getElementById('athletics');
+let athleticsSyncFrame;
+
+function syncAthleticsPanelHeight() {
+  if (!projectsPanel || !athleticsPanel) return;
+
+  athleticsPanel.classList.remove('is-height-synced');
+  athleticsPanel.style.removeProperty('height');
+
+  if (!window.matchMedia('(min-width: 901px)').matches) return;
+
+  const targetBottom = projectsPanel.getBoundingClientRect().bottom;
+  const athleticsTop = athleticsPanel.getBoundingClientRect().top;
+  const targetHeight = Math.round(targetBottom - athleticsTop);
+
+  if (targetHeight > 0) {
+    athleticsPanel.style.height = `${targetHeight}px`;
+    athleticsPanel.classList.add('is-height-synced');
+  }
+}
+
+function requestAthleticsSync() {
+  window.cancelAnimationFrame(athleticsSyncFrame);
+  athleticsSyncFrame = window.requestAnimationFrame(syncAthleticsPanelHeight);
+}
+
+window.addEventListener('load', requestAthleticsSync);
+window.addEventListener('resize', requestAthleticsSync, { passive: true });
+document.fonts?.ready.then(requestAthleticsSync);
+
+if ('ResizeObserver' in window && projectsPanel) {
+  new ResizeObserver(requestAthleticsSync).observe(projectsPanel);
+}
 
 // Close mobile menu when clicking outside
 document.addEventListener('click', (e) => {

@@ -1017,14 +1017,39 @@ h3{font-size:1.1rem;font-weight:600;margin-bottom:12px;letter-spacing:.2px}
   max-width:100%;
   min-width:0;
   overflow:hidden;
+  border-radius:4px;
 }
 .long-run-banner img{
   display:block;
   width:100%;
   max-width:100%;
-  height:auto !important;
-  aspect-ratio:auto !important;
-  object-fit:contain !important;
+  height:auto;
+  object-fit:contain;
+}
+
+@media (min-width:901px){
+  .long-run-banner{
+    height:clamp(190px, 14vw, 220px);
+  }
+  .long-run-banner img{
+    height:100%;
+    object-fit:cover;
+    object-position:center 52%;
+  }
+  #athletics.is-height-synced{
+    overflow:hidden;
+  }
+  #athletics.is-height-synced > .container{
+    display:flex;
+    flex-direction:column;
+    height:100%;
+    min-height:0;
+  }
+  #athletics.is-height-synced .long-run-banner{
+    flex:1 1 0;
+    height:auto;
+    min-height:0;
+  }
 }
 
 /* Dotted drop-shadow (turbopuffer technique): a tiled-dot layer offset to the
