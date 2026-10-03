@@ -527,6 +527,11 @@ h3{font-size:1.1rem;font-weight:600;margin-bottom:12px;letter-spacing:.2px}
   flex-shrink:0;
 }
 
+:root[data-theme="dark"] .company-logo[src$="mem0.webp"],
+:root[data-theme="dark"] .company-logo[src$="scriben.webp"]{
+  filter:invert(1);
+}
+
 .experience-list .exp-title-group{
   grid-column:2;
   grid-row:1;
