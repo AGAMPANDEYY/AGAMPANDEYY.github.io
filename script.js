@@ -24,16 +24,6 @@ if (themeToggle) {
   });
 }
 
-// Follow OS changes only while the user hasn't made an explicit choice
-const darkMq = window.matchMedia('(prefers-color-scheme: dark)');
-darkMq.addEventListener('change', (e) => {
-  let stored = null;
-  try { stored = localStorage.getItem('theme'); } catch (err) {}
-  if (stored !== 'light' && stored !== 'dark') {
-    applyTheme(e.matches ? 'dark' : 'light');
-  }
-});
-
 // Mobile navigation toggle
 const toggle = document.querySelector('.nav-toggle');
 const links = document.querySelector('.nav-links');
