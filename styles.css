@@ -527,6 +527,11 @@ h3{font-size:1.1rem;font-weight:600;margin-bottom:12px;letter-spacing:.2px}
   flex-shrink:0;
 }
 
+/* Scriben's transparent wordmark is black by default; keep it white on dark surfaces. */
+:root[data-theme="dark"] .experience-list .scriben-logo{
+  filter:brightness(0) invert(1);
+}
+
 .experience-list .exp-title-group{
   grid-column:2;
   grid-row:1;
