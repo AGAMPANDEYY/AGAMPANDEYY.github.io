@@ -946,6 +946,7 @@ h3{font-size:1.1rem;font-weight:600;margin-bottom:12px;letter-spacing:.2px}
 #news > .container > h2,
 #athletics > .container > h2{
   display:inline-block;
+  align-self:flex-start;          /* stay text-width when the panel is a flex column (Athletics height sync) */
   margin:0 0 14px 8px;
   transform:translateY(-50%);
   padding:0 8px;
@@ -1052,17 +1053,6 @@ h3{font-size:1.1rem;font-weight:600;margin-bottom:12px;letter-spacing:.2px}
     height:100%;
     object-fit:cover;
     object-position:center 52%;
-  }
-  #athletics.is-height-synced > .container{
-    display:flex;
-    flex-direction:column;
-    height:100%;
-    min-height:0;
-  }
-  #athletics.is-height-synced .long-run-banner{
-    flex:1 1 0;
-    height:auto;
-    min-height:0;
   }
 }
 

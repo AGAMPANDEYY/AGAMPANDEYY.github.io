@@ -116,36 +116,34 @@ window.addEventListener('scroll', updateActiveNav);
 window.addEventListener('load', updateActiveNav);
 
 // Keep the lower desktop panels aligned without forcing a tall Athletics image.
-// The image fills only the space left below the race gallery; stacked layouts
-// return to their natural responsive height.
+// Only the long-run banner's height changes to absorb the difference, so the
+// panel keeps normal block layout (its legend renders like every other panel);
+// stacked layouts return to their natural responsive height.
 const projectsPanel = document.getElementById('projects');
 const athleticsPanel = document.getElementById('athletics');
+const athleticsBanner = athleticsPanel?.querySelector('.long-run-banner');
 let athleticsSyncFrame;
 
 function syncAthleticsPanelHeight() {
-  if (!projectsPanel || !athleticsPanel) return;
+  if (!projectsPanel || !athleticsPanel || !athleticsBanner) return;
 
   athleticsPanel.classList.remove('is-height-synced');
-  athleticsPanel.style.removeProperty('height');
+  athleticsBanner.style.removeProperty('height');
 
   if (!window.matchMedia('(min-width: 901px)').matches) return;
 
-  const targetBottom = projectsPanel.getBoundingClientRect().bottom;
-  const athleticsTop = athleticsPanel.getBoundingClientRect().top;
-  const targetHeight = Math.round(targetBottom - athleticsTop);
+  const athleticsRect = athleticsPanel.getBoundingClientRect();
+  const targetHeight = projectsPanel.getBoundingClientRect().bottom - athleticsRect.top;
+  if (targetHeight <= 0) return;
 
-  if (targetHeight > 0) {
-    athleticsPanel.style.height = `${targetHeight}px`;
-    athleticsPanel.classList.add('is-height-synced');
+  const bannerHeight = athleticsBanner.getBoundingClientRect().height + (targetHeight - athleticsRect.height);
 
-    // Too little room left for the long-run banner: keep the natural height
-    // instead of squashing the banner or cutting off the race photos.
-    const banner = athleticsPanel.querySelector('.long-run-banner');
-    if (banner && banner.getBoundingClientRect().height < 120) {
-      athleticsPanel.classList.remove('is-height-synced');
-      athleticsPanel.style.removeProperty('height');
-    }
-  }
+  // Too little room left for the long-run banner: keep the natural height
+  // instead of squashing the banner.
+  if (bannerHeight < 120) return;
+
+  athleticsBanner.style.height = `${bannerHeight}px`;
+  athleticsPanel.classList.add('is-height-synced');
 }
 
 function requestAthleticsSync() {
