@@ -1053,9 +1053,6 @@ h3{font-size:1.1rem;font-weight:600;margin-bottom:12px;letter-spacing:.2px}
     object-fit:cover;
     object-position:center 52%;
   }
-  #athletics.is-height-synced{
-    overflow:hidden;
-  }
   #athletics.is-height-synced > .container{
     display:flex;
     flex-direction:column;

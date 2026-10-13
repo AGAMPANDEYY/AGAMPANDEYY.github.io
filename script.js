@@ -137,6 +137,14 @@ function syncAthleticsPanelHeight() {
   if (targetHeight > 0) {
     athleticsPanel.style.height = `${targetHeight}px`;
     athleticsPanel.classList.add('is-height-synced');
+
+    // Too little room left for the long-run banner: keep the natural height
+    // instead of squashing the banner or cutting off the race photos.
+    const banner = athleticsPanel.querySelector('.long-run-banner');
+    if (banner && banner.getBoundingClientRect().height < 120) {
+      athleticsPanel.classList.remove('is-height-synced');
+      athleticsPanel.style.removeProperty('height');
+    }
   }
 }
 
